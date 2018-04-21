@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Teachers</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding class="common-bg animated fadeIn">
+  <ion-fab bottom right >
+    <button ion-fab color="danger" navPush='AddTeacherPage' detail-none>
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-grid class="card" padding *ngFor="let t of teacherList; let i=index" style="margin-bottom:20px; padding-bottom:0px">
+    <ion-row>
+        <ion-col col-4>
+            <h6>Name</h6>
+            <h6>Mobile</h6> 
+            <h6>Email</h6>
+            <h6>Address</h6>
+        </ion-col>
+        <ion-col col-8>
+            <h6>{{t.member_name}}</h6>
+            <h6>{{t.username}}</h6>
+            <h6>{{t.email}}</h6>
+            <h6>{{t.member_address}}</h6>
+            <h6 style="padding-bottom:0px">
+                <ion-icon name="trash" item-start style="color:#f53d3d;margin-right: 10%" class="pull-right" (click)="deleteTeacher(t.id)"></ion-icon>
+                <ion-icon name="create" item-start style="color:#0039a2" class="pull-right" style="margin-right: 8%" navPush="AddTeacherPage" [navParams]="{teacher:t, indx:i}"></ion-icon>
+            </h6>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

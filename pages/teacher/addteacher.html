@@ -1,0 +1,65 @@
+<ion-header>
+<ion-navbar color="primary">
+    <ion-title *ngIf="!update">Add Teacher</ion-title>
+    <ion-title *ngIf="update">Update Teacher</ion-title>
+</ion-navbar>
+
+</ion-header>
+<ion-content padding class="common-bg animated fadeIn">
+    <form class="list-form" (ngSubmit)="addTeacher(teacher)">
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="key" item-start class="text-primary"></ion-icon>
+            Name
+            </ion-label>
+            <ion-input type="text" name="name" [(ngModel)]="teacher.member_name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="phone-portrait" item-start class="text-primary"></ion-icon>
+            Mobile
+            </ion-label>
+            <ion-input type="tel" name="username" [(ngModel)]="teacher.username"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+            Password
+            </ion-label>
+            <ion-input type="password" name="password" [(ngModel)]="teacher.password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+            Email
+            </ion-label>
+            <ion-input type="email" name="email" [(ngModel)]="teacher.email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="call" item-start class="text-primary"></ion-icon>
+            Alternate Mobile
+            </ion-label>
+            <ion-input type="tel" name="alternateMobile" [(ngModel)]="teacher.member_alt_phone"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="home" item-start class="text-primary"></ion-icon>
+            Address
+            </ion-label>
+            <ion-input type="text" name="Address" [(ngModel)]="teacher.member_address"></ion-input>
+        </ion-item><br>
+        <div>
+            <button type="submit" ion-button icon-start block color="dark" tappable>
+                <span *ngIf="!update">Add Teacher</span>
+                <span *ngIf="update">Update Teacher</span>
+            </button>
+            <br><br>
+        </div>
+    </form>
+</ion-content>

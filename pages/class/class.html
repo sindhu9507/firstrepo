@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Classes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding class="common-bg animated fadeIn">
+  <ion-fab bottom right >
+    <button ion-fab color="danger" navPush='AddClassPage' detail-none>
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-list radio-group class="card" *ngFor="let c of classList; let i=index">
+    <ion-item>
+      <ion-label><b>Class</b></ion-label>
+      <ion-label>{{c.class}} {{c.sec}}</ion-label>
+      <ion-label>
+          <ion-icon name="trash" item-start style="color:#f53d3d" class="pull-right" (click)="deleteClass(i)"></ion-icon>
+          <ion-icon name="create" item-start style="color:#0039a2" class="pull-right" style="margin-right: 6%" navPush="AddClassPage" [navParams]="{class:c, indx:i}"></ion-icon>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><b>Class Teacher</b></ion-label>
+      <ion-label>{{getTeacher(c.classteacher)}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><b>Subject</b></ion-label>
+      <ion-label><b>Teacher</b></ion-label>
+    </ion-item>
+    <ion-item *ngFor="let sub of c.subjects">
+      <ion-label>{{sub.subject}}</ion-label>
+      <ion-label>{{getTeacher(sub.teacher)}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <!-- <ion-grid class="card" padding *ngFor="let c of classList; let i=index" style="margin-bottom:20px; padding-bottom:0px">
+    <ion-row>
+        <ion-col col-6>
+            <h6>Class</h6> 
+            <h6>Class Teacher</h6>
+            <h6><b>Subject</b></h6><hr>
+            <h6 *ngFor="let sub of c.subjects">{{sub.subject}}</h6>
+        </ion-col>
+        <ion-col col-6>
+            <h6>{{c.class}} {{c.sec}}</h6>
+            <h6>{{getClassTeacher(c.classteacher)}}</h6>
+            <h6><b>Teacher</b></h6><hr>
+            <h6 *ngFor="let sub of c.subjects">{{getClassTeacher(sub.teacher)}}</h6>
+            <h6 style="padding-bottom:0px">
+                <ion-icon name="trash" item-start style="color:#f53d3d" class="pull-right" (click)="deleteClass(i)"></ion-icon>
+                <ion-icon name="create" item-start style="color:#0039a2" class="pull-right" style="margin-right: 6%" navPush="AddClassPage" [navParams]="{class:c, indx:i}"></ion-icon>
+            </h6>
+        </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-content>

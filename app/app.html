@@ -1,0 +1,30 @@
+<ion-menu side="left" id="authenticated" [content]="content">
+  <ion-header>
+    <ion-toolbar class="user-profile">
+
+      <ion-grid>
+        <h2 ion-text class="no-margin bold text-white">
+          <!-- {{student.member_name}} -->
+          <button ion-button float-right icon-only (click)="presentPopover($event)" *ngIf="userrole=='parent'">
+            <ion-icon name="more"></ion-icon>
+          </button>
+        </h2>
+        <span ion-text color="light">Customer</span>
+      </ion-grid>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content color="primary">
+
+    <ion-list class="user-list">
+      <button ion-item menuClose class="text-1x" *ngFor="let menuItem of appMenuItems" (click)="openPage(menuItem)">
+        <ion-icon item-left [name]="menuItem.icon" color="primary"></ion-icon>
+        <span ion-text color="primary">{{menuItem.title}}</span>
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title *ngIf="!update">Add Class</ion-title>
+        <ion-title *ngIf="update">Update Class</ion-title>
+    </ion-navbar>
+    
+</ion-header>
+<ion-content padding class="common-bg animated fadeIn">
+    <form class="list-form">
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="key" item-start class="text-primary"></ion-icon>
+            Class
+            </ion-label>
+            <ion-input type="text" name="class" [(ngModel)]="class.class"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="phone-portrait" item-start class="text-primary"></ion-icon>
+            Section
+            </ion-label>
+            <ion-input type="text" name="section" [(ngModel)]="class.sec"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+            Class Teacher
+            </ion-label>
+            <ion-select name="classteacher" [(ngModel)]="class.classteacher">
+                <ion-option value="{{teacher.id}}" *ngFor="let teacher of teacherList">{{teacher.member_name}}</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+            Subject Name
+            </ion-label>
+            <ion-input type="text" name="subject" [(ngModel)]="sub.subject"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>
+            <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+            Teacher
+            </ion-label>
+            <ion-select name="subjectteacher" [(ngModel)]="sub.teacher">
+                <ion-option value="{{teacher.id}}" *ngFor="let teacher of teacherList">{{teacher.member_name}}</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <button type="button" ion-button icon-start clear block color="success" tappable (click)="addSubject(sub)">
+            <span *ngIf="!updateSubjct">Add Subject</span>
+            <span *ngIf="updateSubjct">Update Subject</span>
+        </button><br>
+    </form>
+
+    <ion-card *ngFor="let c of class.subjects; let i=index">
+        <ion-card-content text-center text-uppercase>
+            {{c.subject}} - {{getTeacher(c.teacher)}}
+            <ion-icon name="trash" item-start style="color:#f53d3d" class="pull-right" (click)="deleteSubject(i)"></ion-icon>
+            <ion-icon name="create" item-start style="color:#0039a2" class="pull-right" style="margin-right: 6%" (click)="editSubject(c,i)"></ion-icon>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+<ion-footer>
+    <button type="button" ion-button icon-start block color="dark" tappable style="margin:0" (click)="addClass(class)">
+        <span *ngIf="!update">Add Class</span>
+        <span *ngIf="update">Update Class</span>
+    </button>
+</ion-footer>

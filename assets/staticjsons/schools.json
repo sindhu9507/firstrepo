@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+		"school_name":"nirmala",
+		"school_address":"patamata",
+        "school_phone":1111111111,
+        "school_alt_phone":1111111111,
+        "school_email":"nirmala@gmail.com"
+    },
+    {
+        "id":2,
+        "school_name":"bhasyam",
+        "school_address":"gayatri nagar",
+        "school_phone":2222222222,
+        "school_alt_phone":2222222222,
+        "school_email":"bhasyam@gmail.com"
+    },
+    {
+        "id":3,
+        "school_name":"srichaitanya",
+        "school_address":"mougalrajpuram",
+        "school_phone":3333333333,
+        "school_alt_phone":3333333333,
+        "school_email":"srichaitanya@gmail.com"
+    },
+    {
+        "id":4,
+        "school_name":"narayana",
+        "school_address":"mougalrajpuram",
+        "school_phone":4444444444,
+        "school_alt_phone":4444444444,
+        "school_email":"narayana@gmail.com"
+    },
+    {
+        "id":5,
+        "school_name":"donbasco",
+        "school_address":"krishnalanka",
+        "school_phone":5555555555,
+        "school_alt_phone":5555555555,
+        "school_email":"donbasco@gmail.com"
+    }
+]

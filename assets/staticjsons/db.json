@@ -1,0 +1,177 @@
+{
+  "members": [
+    {
+      "id": 11,
+      "username": 9876543210,
+      "member_name": "admin",
+      "password": "admin",
+      "school_id": 2,
+      "email": "sai@gmail.com",
+      "member_alt_phone": 123456789,
+      "member_address": "patamata",
+      "role": "admin"
+    },
+    {
+      "id": 33,
+      "username": 8888888888,
+      "member_name": "jai",
+      "password": "parent",
+      "school_id": 2,
+      "email": "jai@gmail.com",
+      "member_alt_phone": 123456789,
+      "member_address": "krishnalanka",
+      "role": "parent",
+      "children": [
+        66,
+        88
+      ]
+    },
+    {
+      "id": 44,
+      "username": 9999999999,
+      "member_name": "gopi",
+      "password": "teacher",
+      "school_id": 2,
+      "email": "gopi@gmail.com",
+      "member_alt_phone": 123456789,
+      "member_address": "varadhi bus stop",
+      "role": "teacher",
+      "modifiedBy": 11
+    },
+    {
+      "id": 55,
+      "username": 1010101010,
+      "member_name": "kumar",
+      "password": "kumar",
+      "school_id": 2,
+      "email": "kumar@gmail.com",
+      "member_alt_phone": 123456789,
+      "member_address": "gannavaram",
+      "role": "parent",
+      "children": [
+        77
+      ]
+    },
+    {
+      "id": 66,
+      "username": 1122334455,
+      "member_name": "sindhu",
+      "role": "student"
+    },
+    {
+      "id": 77,
+      "username": 6677889900,
+      "member_name": "madhavi",
+      "role": "student"
+    },
+    {
+      "id": 88,
+      "username": 5544332211,
+      "member_name": "mani",
+      "role": "student"
+    },
+    {
+      "username": "8521232521",
+      "password": "12345",
+      "member_name": "Deepak",
+      "children": [],
+      "email": "deep@gmail.com",
+      "member_address": "vij",
+      "member_alt_phone": "456456456",
+      "schoolid": {},
+      "role": "teacher",
+      "createdBy": 11,
+      "id": 93
+    },
+    {
+      "username": "9032205471",
+      "password": "demo",
+      "member_name": "Sindhu Garimella",
+      "children": [],
+      "email": "sindhu9507@gmail.com",
+      "member_address": "Patamata",
+      "schoolid": {},
+      "role": "teacher",
+      "createdBy": 11,
+      "id": 94
+    },
+    {
+      "username": "9948591248",
+      "password": "demo",
+      "member_name": "Sindhu",
+      "children": [],
+      "email": "demo@gmail.com",
+      "member_address": "Kanuru",
+      "schoolid": {},
+      "role": "teacher",
+      "createdBy": 11,
+      "id": 95
+    }
+  ],
+  "classes": [
+    {
+      "id": 1,
+      "class": 1,
+      "sec": "A",
+      "classteacher": 22,
+      "subjects": [
+        {
+          "subject": "Telugu",
+          "teacher": 44
+        },
+        {
+          "subject": "Hindi",
+          "teacher": 44
+        },
+        {
+          "subject": "English",
+          "teacher": 44
+        },
+        {
+          "subject": "Maths",
+          "teacher": 22
+        },
+        {
+          "subject": "Science",
+          "teacher": 22
+        },
+        {
+          "subject": "Social",
+          "teacher": 22
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "class": 1,
+      "sec": "B",
+      "classteacher": 44,
+      "subjects": [
+        {
+          "subject": "Telugu",
+          "teacher": 22
+        },
+        {
+          "subject": "Hindi",
+          "teacher": 22
+        },
+        {
+          "subject": "English",
+          "teacher": 22
+        },
+        {
+          "subject": "Maths",
+          "teacher": 44
+        },
+        {
+          "subject": "Science",
+          "teacher": 44
+        },
+        {
+          "subject": "Social",
+          "teacher": 44
+        }
+      ]
+    }
+  ]
+}
