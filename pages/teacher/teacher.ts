@@ -41,7 +41,7 @@ export class TeacherPage {
       },
       (err) => {
         this.loading.dismiss();
-        console.log(err)
+        console.log(err);
       }
     )
   }
