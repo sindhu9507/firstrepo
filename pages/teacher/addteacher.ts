@@ -43,7 +43,7 @@ export class AddTeacherPage {
         },
         (err) => {
           this.loading.dismiss();
-          console.log(err)
+          console.log(err);
         }
       )
     }
